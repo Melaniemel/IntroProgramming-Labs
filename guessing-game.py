@@ -5,15 +5,21 @@ main()
 answer = "dog"
 guess = ""
 
+
 while not guess == answer:
     print("I'm thinking of an animal")
     guess = input("What animal am I thinking about?")
-    break
+    guess = guess.lower()
+    
+    if guess == answer:
+        print("You win!")
+        break
+        
+    elif guess == "quit":
+        break
 
-if guess == answer:
-    print("You win!")
-else:
-    print ("Wrong! Try Again")
+    else:
+        print ("Wrong! Try Again")
 
 
                 

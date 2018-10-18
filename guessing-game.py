@@ -12,10 +12,14 @@ while not guess == answer:
     guess = guess.lower()
     
     if guess == answer:
-        print("You win!")
-        break
+        choice = input("Do you like the animal?  Y for yes and N for no.")
+        if choice == "Y":
+            print ("I love them too.")
+        if choice == "N":
+            print("I don't like them either.")
+            break
         
-    elif guess == "quit":
+    elif guess[0] == "q":
         break
 
     else:

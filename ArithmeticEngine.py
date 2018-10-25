@@ -15,8 +15,15 @@ def doLoop():
     while True:
         cmd = input("What computation do you want to perform? ")
         cmd = cmd.lower()
-        num1 = int(input("Enter the first  number: "))
-        num2 = int(input("Enter the second number: "))
+        try:
+            num1 = int(input("Enter the first  number: "))
+            num2 = int(input("Enter the second number: "))
+            frac = num1//num2
+        except :
+            print ("Unable to divide by zero!")
+            frac = 0
+            continue
+            
         if cmd == "add":
             result = num1 + num2
         elif cmd == "sub":
@@ -24,7 +31,7 @@ def doLoop():
         elif cmd == "mult":
             result = num1 * num2
         elif cmd == "div":
-            result = num1 // num2
+            result = num1 // num2    
         elif cmd == "quit":
             break
         else:
